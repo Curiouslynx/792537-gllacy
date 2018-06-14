@@ -5,87 +5,101 @@
 	<title>HTML Academy: Глейси</title>
 </head>
 <body>
-
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a class="logo">
+			<p class="logo">
 				<img src="img/logo.png" width="170" height="75" alt="Логотип Глейси">
-			</a>
+			</p>
 			<ul class="site-navigation">
-				<li><a href="catalog.html">Каталог</a></li>
-				<li><a href="delvery.html">Доставка и оплата</a></li>
-				<li><a href="abotu.html">О компании</a></li>
+				<li><a href="catalog.html" title="Каталог мороженого">Каталог</a></li>
+				<li><a href="delvery.html" title="Информация о доставке и оплате">Доставка и оплата</a></li>
+				<li><a href="abotu.html" title="Информация о компании">О компании</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li><a href="search.html">Поиск</a></li>
-				<li><a href="login.html">Вход</a></li>
-				<li><a href="basket.html">Корзина</a></li>
+				<li><a href="search.html" title="Поиск по сайту">Поиск</a></li>
+				<li><a href="login.html" title="Вход в личный кабинет">Вход</a></li>
+				<li><a href="basket.html" title="Корзина покупок">Корзина</a></li>
 			</ul>
 		</nav>
 		<div class="worktime-info">
 			<p class="worktime">С 10 до 20, ежедневно</p>
-			<p class="tel">8 812 450-25-25</p>
+			<a class="phone" href="tel:+88124502525" title="Рабочий телефон">8 812 450-25-25</a>
 		</div>
 	</header>
-
 	<main class="container">
-		<h1 class="invisible">Интернет-магазин мороженого с доставкой «Глэйси»</h1>
+		<h1 class="invisible-h1">Интернет-магазин мороженого с доставкой «Глэйси»</h1>
 		<section class="slider">
-			<h2 class="invisible">Двойные порции</h2>
+			<h2 class="invisible-h2">Двойные порции</h2>
 			<ul class="slider-list">
 				<li>
 					<p>Крем-брюле и пломбир с малиновым джемом</p>
-					<a href="#" class="slider-button">Давайте оба!</a>
+					<a href="#" class="slider-button" title="Заказать Крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
 				</li>
 				<li>
 					<p>Шоколадный пломбир и лимонный сорбет</p>
-					<a href="#" class="slider-button">Давайте оба!</a>
+					<a href="#" class="slider-button" title="Заказать Шоколадный пломбир и лимонный сорбет">Давайте оба!</a>
 				</li>
 				<li>
 					<p>Пломбир с помадкой и клубничный щербет</p>
-					<a href="#" class="slider-button">Давайте оба!</a>
+					<a href="#" class="slider-button" title="Заказать Пломбир с помадкой и клубничный щербет">Давайте оба!</a>
 				</li>
 			</ul>
 		</section>
 		<section class="promo">
-			<h2 class="invisible">Промо-акции</h2>
+			<h2 class="invisible-h2">Промо-акции</h2>
 			<div class="promo-left">
 				<h3>Малинка даром!</h3>
 				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-				<a href="#" class="button">Хочу варенье!</a>
+				<a href="#" class="button" title="Заказать фруктовое мороженое с малиновым вареньем">Хочу варенье!</a>
 			</div>
 			<div class="promo-right">
 				<h3>Шоколадки даром!</h3>
 				<p>При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.<p>
-				<a href="#" class="button">Хочу шоколадки!</a>
+				<a href="#" class="button" title="Заказать пломбира с шоколадной присыпкой">Хочу шоколадки!</a>
 			</div>
 		</section>
 		<section class="hits">
-			<h2 class="invisible">Хиты продаж</h2>
+			<h2 class="invisible-h2">Хиты продаж</h2>
 			<ul class="hits-list">
 				<li>
-					<a href="#"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
+					<a href="#" title="Мороженое"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
 					<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-					<a href="#" class="invisible">Быстрый просмотр</a>
-					<div class="price">310 ք/кг</div>
+					<a href="#" class="invisible-a" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<div class="price">
+						<span class="price-value">310</span>
+						<span class="currency">ք</span>
+						<span class="weight">кг</span>
+					</div>
 				</li>
 				<li>
-					<a href="#"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
+					<a href="#" title="Мороженое"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
 					<p>Сливочно-кофейное с кусочками шоколада</p>
-					<a href="#" class="invisible">Быстрый просмотр</a>
-					<div class="price">380 ք/кг</div>
+					<a href="#" class="invisible-a" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<div class="price">
+						<span class="price-value">380</span>
+						<span class="currency">ք</span>
+						<span class="weight">кг</span>
+					</div>
 				</li>
 				<li>
-					<a href="#"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
+					<a href="#" title="Мороженое"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
 					<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-					<a href="#" class="invisible">Быстрый просмотр</a>
-					<div class="price">355 ք/кг</div>
+					<a href="#" class="invisible-a" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<div class="price">
+						<span class="price-value">355</span>
+						<span class="currency">ք</span>
+						<span class="weight">кг</span>
+					</div>
 				</li>
 				<li>
-					<a href="#"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
+					<a href="#" title="Мороженое"><img src="http://placehold.it/270x270" alt="Мороженое" width="270" height="270"></a>
 					<p>Сливочное крем-брюле с карамельной подливкой</p>
-					<a href="#" class="invisible">Быстрый просмотр</a>
-					<div class="price">415 ք/кг</div>
+					<a href="#" class="invisible-a" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<div class="price">
+						<span class="price-value">415</span>
+						<span class="currency">ք</span>
+						<span class="weight">кг</span>
+					</div>
 				</li>
 			</ul>
 		</section>
@@ -100,10 +114,10 @@
 		</section>
 		<article class="blog-news">
 			<h2>Новое в нашем блоге</h2>
-			<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+			<a href="#" title="10 способов сервировки фруктовых щербетов к столу">10 способов сервировки фруктовых щербетов к столу</a>
 		</article>
 		<section class="mail-request">
-			<h2 class="invisible">Подписка на новости</h2>
+			<h2 class="invisible-h2">Подписка на новости</h2>
 			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужно ерунды. Честно =)</p>
 			<!-- FORM -->
 		</section>
@@ -119,28 +133,26 @@
 			</div>
 		</section>
 	</main>
-
 	<footer class="main-footer">
 		<div class="footer-social">
 			<ul class="social-list">
-				<li>Твиттер</li>
-				<li>Инстаграм</li>
-				<li>Фейсбук</li>
-				<li>ВКонтакте</li>
+				<li><a href="#" class="social-tw" title="Страница в Твиттере" target="_blank">Твиттер</a></li>
+				<li><a href="#" class="social-in" title="Страница в Инстаграм" target="_blank">Инстаграм</a></li>
+				<li><a href="#" class="social-fb" title="Группа в Фейсбуке" target="_blank">Фейсбук</a></li>
+				<li><a href="#" class="social-vk" title="Группа ВКонтакте" target="_blank">ВКонтакте</a></li>
 			</ul>
 		</div>
 		<div class="footer-links">
 			<ul class="footer-links-list">
-				<li><a href="#">Для поставщиков</a></li>
-				<li><a href="#">Наши документы</a></li>
-				<li><a href="#">О производстве</a></li>
-				<li><a href="#">Экологические стандарты</a></li>
+				<li><a href="#" title="Информация для поставщиков">Для поставщиков</a></li>
+				<li><a href="#" title="Юридические документы">Наши документы</a></li>
+				<li><a href="#" title="Информация о производстве">О производстве</a></li>
+				<li><a href="#" title="Информация об экологических стандартах">Экологические стандарты</a></li>
 			</ul>
 		</div>
 		<div class="footer-copyright">
 			Сделано в HTML Academy &copy; 2018
 		</div>
 	</footer>
-
 </body>
 </html>
