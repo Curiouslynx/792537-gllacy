@@ -14,3 +14,12 @@
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+.sub-menu {
+	display:none;
+}
+/* спец.правило для ДОСТУПНОСТИ подменю с клавиатуры: */
+.site-navigation>li:hover .sub-menu,
+.site-navigation>li:focus-within .sub-menu{
+	display:block;
+}
