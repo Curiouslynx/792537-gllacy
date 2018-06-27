@@ -25,9 +25,56 @@
 				<li><a href="abotu.html" title="Информация о компании">О компании</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li><a href="search.html" title="Поиск по сайту">Поиск</a></li>
-				<li><a href="login.html" title="Вход в личный кабинет">Вход</a></li>
-				<li><a href="basket.html" class="active" title="Корзина покупок">2 товара</a></li>
+				<li>
+					<a href="search.html" title="Поиск по сайту">Поиск</a>
+					<section class="modal modal-search">
+						<h2 class="visually-hidden">Поиск по сайту</h2>
+						<form action="https://yandex.ru/search/" method="get" class="form-search">
+							<input type="text" name="text" placeholder="Что ищем?" required="required">
+							<input type="hidden" name="site" value="gllacy.ru">
+						</form>
+					</section>
+				</li>
+				<li>
+					<a href="login.html" title="Вход в личный кабинет">Вход</a>
+					<section class="modal modal-login">
+						<h2 class="visually-hidden">Вход в личный кабинет</h2>
+						<form action="https://echo.htmlacademy.ru/" method="get" class="form-login">
+							<p>
+								<label class="visually-hidden" for="user-login">Логин</label>
+								<input type="text" name="login" id="user-login" class="login-email" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label class="visually-hidden" for="user-password">Пароль</label>
+								<input type="text" name="password" id="user-password"class="login-password" placeholder="Пароль">
+							</p>
+							<p>
+								<button type="submit" class="button-login">Войти</button>
+								<div class="login-links">
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
+								</div>
+							</p>
+						</form>
+					</section>
+				</li>
+				<li>
+					<a href="basket.html" class="active" title="Корзина покупок">2 товара</a>
+					<div class="basket-list">
+						<div class="basket-position">
+							<span>Пломбир с апельсиновым джемом</span>
+							<span>1,5 кг x 200 руб.</span>
+							<span>300 руб. </span>
+						</div>
+						<div class="basket-position">
+							<span>Клубничный пломбир с присыпкой из белого шоколада </span>
+							<span>1,5 кг x 300 руб.</span>
+							<span>450 руб. </span>
+						</div>
+						<div class="summa">Итого: 750 руб.</div>
+						<button type="button" class="order-button">Оформить заказ</button>
+					</div>
+				</li>
 			</ul>
 		</nav>
 		<div class="worktime-info">
@@ -48,23 +95,67 @@
 			<form action="https://echo.htmlacademy.ru/" method="get">
 				<fieldset>
 					<legend>Сортировка</legend>
-					<label for="sorting">по популярности</label>
-					<input id="sorting" type="checkbox">
+					<select name="sort">
+              			<option value="sort-popular">по популярности</option>
+              			<option value="sort-price">по цене</option>
+            		</select>
 				</fieldset>
 				<fieldset>
 					<legend>Цена: 100 руб. - 500 руб.</legend>
+					<div class="price-wrapper">
+						<div class="price-control">
+							<div class="price-dot-min"></div>
+							<div class="price-dot-max"></div>
+						</div>
+					</div>
+					<input type="hidden" name="min" id="min-price">
+					<input type="hidden" name="max" id="max-price">
 				</fieldset>
 				<fieldset>
 					<legend>Жирность:</legend>
-					<ul>
-						<li class="filter-option"><input type="radio" name="fats"></li>
-						<li class="filter-option"><input type="radio" name="fats"></li>
-						<li class="filter-option"><input type="radio" name="fats"></li>
-						<li class="filter-option"><input type="radio" name="fats"></li>
+					<ul class="fat-filter">
+						<li>
+							<input type="radio" name="fats" id="fat-0" class="visually-hidden">
+							<label for="fat-0">0%</label>
+						</li>
+						<li>
+							<input type="radio" name="fats" id="fat-10" class="visually-hidden"> 
+							<label for="fat-10">до 10%</label>
+						</li>
+						<li>
+							<input type="radio" name="fats" id="fat-30" class="visually-hidden"> 
+							<label for="fat-30">до 30%</label>
+						</li>
+						<li>
+							<input type="radio" name="fats" id="fat-30plus" class="visually-hidden"> 
+							<label for="fat-30plus">свыше 30%</label>
+						</li>
 					</ul>
 				</fieldset>
 				<fieldset>
 					<legend>Наполнители:</legend>
+					<ul class="stuffing-filter">
+						<li>
+							<input type="checkbox" name="choco" id="stuff-choco" class="visually-hidden" checked>
+							<label for="stuff-choco">шоколадные</label>
+						</li>
+						<li>
+							<input type="checkbox" name="sugar" id="stuff-sugar" class="visually-hidden" checked>
+							<label for="stuff-sugar">сахарные присыпки</label>
+						</li>
+						<li>
+							<input type="checkbox" name="fruit" id="stuff-fruit" class="visually-hidden">
+							<label for="stuff-fruit">фрукты</label>
+						</li>
+						<li>
+							<input type="checkbox" name="syrup" id="stuff-syrup" class="visually-hidden">
+							<label for="stuff-syrup">сиропы</label>
+						</li>
+						<li>
+							<input type="checkbox" name="jam" id="stuff-jam" class="visually-hidden">
+							<label for="stuff-jam">джемы</label>
+						</li>
+					</ul>
 				</fieldset>
 				<input type="submit" class="button-submit" value="Применить">
 			</form>

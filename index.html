@@ -25,9 +25,42 @@
 				<li><a href="abotu.html" title="Информация о компании">О компании</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li><a href="search.html" title="Поиск по сайту">Поиск</a></li>
-				<li><a href="login.html" title="Вход в личный кабинет">Вход</a></li>
-				<li><a href="basket.html" title="Корзина покупок">Корзина</a></li>
+				<li>
+					<a href="search.html" title="Поиск по сайту">Поиск</a>
+					<section class="modal modal-search">
+						<h2 class="visually-hidden">Поиск по сайту</h2>
+						<form action="https://yandex.ru/search/" method="get" class="form-search">
+							<input type="text" name="text" placeholder="Что ищем?" required="required">
+							<input type="hidden" name="site" value="gllacy.ru">
+						</form>
+					</section>
+				</li>
+				<li>
+					<a href="login.html" title="Вход в личный кабинет">Вход</a>
+					<section class="modal modal-login">
+						<h2 class="visually-hidden">Вход в личный кабинет</h2>
+						<form action="https://echo.htmlacademy.ru/" method="get" class="form-login">
+							<p>
+								<label class="visually-hidden" for="user-login">Логин</label>
+								<input type="text" name="login" id="user-login" class="login-email" placeholder="Электронная почта">
+							</p>
+							<p>
+								<label class="visually-hidden" for="user-password">Пароль</label>
+								<input type="text" name="password" id="user-password"class="login-password" placeholder="Пароль">
+							</p>
+							<p>
+								<button type="submit" class="button-login">Войти</button>
+								<div class="login-links">
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
+								</div>
+							</p>
+						</form>
+					</section>
+				</li>
+				<li>
+					<a href="basket.html" title="Корзина покупок">Корзина</a>
+				</li>
 			</ul>
 		</nav>
 		<div class="worktime-info">
@@ -166,35 +199,7 @@
 			Сделано в HTML Academy &copy; 2018
 		</div>
 	</footer>
-
-	<section class="modal modal-search">
-		<h2 class="visually-hidden">Поиск по сайту</h2>
-		<form action="http://echo.htmlacademy.ru/" method="get" class="form-search">
-			<input type="text" name="query" placeholder="Что ищем?" required="required">
-		</form>
-	</section>
-
-	<section class="modal modal-login">
-		<h2 class="visually-hidden">Вход в личный кабинет</h2>
-		<form action="https://echo.htmlacademy.ru/" method="get" class="form-login">
-			<p>
-				<label class="visually-hidden" for="user-login">Логин</label>
-				<input type="text" name="login" id="user-login" class="login-email" placeholder="Электронная почта">
-			</p>
-			<p>
-				<label class="visually-hidden" for="user-password">Пароль</label>
-				<input type="text" name="password" id="user-password"class="login-password" placeholder="Пароль">
-			</p>
-			<p>
-				<button type="submit" class="button-login">Войти</button>
-				<div class="login-links">
-					<a href="#">Забыли пароль?</a>
-					<a href="#">Новая регистрация</a>
-				</div>
-			</p>
-		</form>
-	</section>
-
+	<!-- POPUP: -->
 	<section class="modal modal-feedback">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
 		<p>Мы обязательно вам ответим!</p>
@@ -214,6 +219,6 @@
 			<button class="button" type="submit">Отправить</button>
 		</form>
 	</section>
-
+	<!-- END POPUP -->
 </body>
 </html>
