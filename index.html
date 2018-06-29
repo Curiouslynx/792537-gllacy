@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Глейси</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<header class="main-header">
@@ -10,24 +13,26 @@
 			<p class="logo">
 				<img src="img/logo.svg" width="170" height="75" alt="Логотип Глейси">
 			</p>
-			<ul class="site-navigation">
+			<ul class="site-navigation interactive">
 				<li>
 					<a href="catalog.html" title="Каталог мороженого">Каталог</a>
-					<ul class="sub-menu">
-                    	<li><a href="#">Новинки</a></li>
-                    	<li><a href="#">Сливочное</a></li>
-                    	<li><a href="#">Щербеты</a></li>
-                    	<li><a href="#">Фруктовый лёд</a></li>
-                    	<li><a href="#">Мелорин</a></li>
-                	</ul>
+					<div class="sub-menu">
+						<ul>
+                    		<li><a href="#">Новинки</a></li>
+                    		<li><a href="#">Сливочное</a></li>
+                    		<li><a href="#">Щербеты</a></li>
+                    		<li><a href="#">Фруктовый лёд</a></li>
+                    		<li><a href="#">Мелорин</a></li>
+                		</ul>
+                	</div>
 				</li>
 				<li><a href="delvery.html" title="Информация о доставке и оплате">Доставка и оплата</a></li>
-				<li><a href="abotu.html" title="Информация о компании">О компании</a></li>
+				<li><a href="about.html" title="Информация о компании">О компании</a></li>
 			</ul>
-			<ul class="user-navigation">
+			<ul class="user-navigation interactive">
 				<li>
 					<a href="search.html" title="Поиск по сайту">Поиск</a>
-					<section class="modal modal-search">
+					<section class="modal modal-search sub-menu">
 						<h2 class="visually-hidden">Поиск по сайту</h2>
 						<form action="https://yandex.ru/search/" method="get" class="form-search">
 							<input type="text" name="text" placeholder="Что ищем?" required="required">
@@ -37,7 +42,7 @@
 				</li>
 				<li>
 					<a href="login.html" title="Вход в личный кабинет">Вход</a>
-					<section class="modal modal-login">
+					<section class="modal modal-login sub-menu">
 						<h2 class="visually-hidden">Вход в личный кабинет</h2>
 						<form action="https://echo.htmlacademy.ru/" method="get" class="form-login">
 							<p>
@@ -68,7 +73,7 @@
 			<a class="phone" href="tel:+88124502525" title="Рабочий телефон">8 812 450-25-25</a>
 		</div>
 	</header>
-	<main class="container">
+	<main class="content">
 		<h1 class="visually-hidden">Интернет-магазин мороженого с доставкой «Глэйси»</h1>
 		<section class="slider">
 			<h2 class="visually-hidden">Двойные порции</h2>
@@ -86,15 +91,26 @@
 					<a href="#" class="slider-button" title="Заказать Пломбир с помадкой и клубничный щербет">Давайте оба!</a>
 				</li>
 			</ul>
+			<ul class="slides-switches">
+				<li class="slide-radio">
+					<button type="button" class="slide-btn" id="slide-btn-1">Первый слайд</button>
+				</li>
+				<li class="slide-radio">
+					<button type="button" class="slide-btn" id="slide-btn-2">Второй слайд</button>
+				</li>
+				<li class="slide-radio">
+					<button type="button" class="slide-btn" id="slide-btn-3">Третий слайд</button>
+				</li>
+			</ul>
 		</section>
-		<section class="promo">
-			<h2 class="visually-hidden">Промо-акции</h2>
-			<div class="promo-left">
+		<section class="actions">
+			<h2 class="visually-hidden">Акции</h2>
+			<div class="actions-raspberry">
 				<h3>Малинка даром!</h3>
 				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 				<a href="#" class="button" title="Заказать фруктовое мороженое с малиновым вареньем">Хочу варенье!</a>
 			</div>
-			<div class="promo-right">
+			<div class="actions-chocolate">
 				<h3>Шоколадки даром!</h3>
 				<p>При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.<p>
 				<a href="#" class="button" title="Заказать пломбира с шоколадной присыпкой">Хочу шоколадки!</a>
@@ -104,42 +120,42 @@
 			<h2 class="visually-hidden">Хиты продаж</h2>
 			<ul class="hits-list">
 				<li>
-					<a href="#" title="Мороженое"><img src="img/cream-1.png" alt="Мороженое" width="267" height="267"></a>
-					<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+					<img src="img/cream-1.png" alt="Мороженое" width="267" height="267">
+					<a href="#" class="description" title="Мороженое">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">310</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<a href="#" title="Мороженое"><img src="img/cream-2.png" alt="Мороженое" width="267" height="267"></a>
-					<p>Сливочно-кофейное с кусочками шоколада</p>
+					<img src="img/cream-2.png" alt="Мороженое" width="267" height="267">
+					<a href="#" class="description" title="Мороженое">Сливочно-кофейное с кусочками шоколада</a>
 					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">380</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<a href="#" title="Мороженое"><img src="img/cream-3.png" alt="Мороженое" width="267" height="267"></a>
-					<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+					<img src="img/cream-3.png" alt="Мороженое" width="267" height="267">
+					<a href="#" class="description" title="Мороженое">Сливочно-клубничное с присыпкой из белого шоколада</a>
 					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">355</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<a href="#" title="Мороженое"><img src="img/cream-4.png" alt="Мороженое" width="267" height="267"></a>
-					<p>Сливочное крем-брюле с карамельной подливкой</p>
+					<img src="img/cream-4.png" alt="Мороженое" width="267" height="267">
+					<a href="#" class="description" title="Мороженое">Сливочное крем-брюле с карамельной подливкой</a>
 					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">415</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
@@ -167,6 +183,7 @@
 			</form>
 		</section>
 		<section class="map">
+			<iframe src="https://yandex.ru/map-widget/v1/-/CBuuR-sj1C" width="100%" height="430" frameborder="0" allowfullscreen="true"></iframe>
 			<div class="map-contacts">
 				<p>Адрес главного офиса<br>
 				и офлайн-магазина:</p>
@@ -175,6 +192,7 @@
 				<p>Для заказов по телефону:</p>
 				<b>8 812 450-25-25</b><br>
 				(с 10 до 20 ежедневно)
+				<button type="button" class="button">Форма обратной связи</button>
 			</div>
 		</section>
 	</main>
@@ -196,7 +214,7 @@
 			</ul>
 		</div>
 		<div class="footer-copyright">
-			Сделано в HTML Academy &copy; 2018
+			Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> &copy; 2018
 		</div>
 	</footer>
 	<!-- POPUP: -->
@@ -209,11 +227,11 @@
 				<input id="feedback-name" type="text" class="feedback-name" name="username" placeholder="Как вас зовут?">
 			</p>
 			<p>
-				<label for="feedback-email" class="visually-hidden">Укажите адрес почтового ящика</label>
+				<label for="feedback-email" class="visually-hidden">Укажите свой email</label>
 				<input id="feedback-email" type="text" class="feedback-email" name="usermail" placeholder="Ваша почта для ответа?">
 			</p>
 			<p>
-				<label for="feedback-text" class="visually-hidden">Напишите ваш вопрос</label>
+				<label for="feedback-text" class="visually-hidden">Напишите свой вопрос</label>
 				<textarea id="feedback-text" class="feedback-text" name="usertext" placeholder="Напишите что-нибудь..."></textarea>
 			</p>
 			<button class="button" type="submit">Отправить</button>

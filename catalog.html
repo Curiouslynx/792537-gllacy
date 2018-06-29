@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Каталог мороженого "Глэйси": Сливочное мороженое</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<header class="main-header">
@@ -10,24 +13,26 @@
 			<a class="logo" href="index.html" title="Главная страница">
 				<img src="img/logo.svg" width="170" height="75" alt="Логотип Глейси">
 			</a>
-			<ul class="site-navigation">
-				<li class="active">
+			<ul class="site-navigation interactive">
+				<li>
 					<a href="catalog.html" title="Каталог мороженого">Каталог</a>
-					<ul class="sub-menu">
-                    	<li><a href="#">Новинки</a></li>
-                    	<li><a href="#">Сливочное</a></li>
-                    	<li><a href="#">Щербеты</a></li>
-                    	<li><a href="#">Фруктовый лёд</a></li>
-                    	<li><a href="#">Мелорин</a></li>
-                	</ul>
+					<div class="sub-menu">
+						<ul>
+                    		<li><a href="#">Новинки</a></li>
+                    		<li><a href="#">Сливочное</a></li>
+                    		<li><a href="#">Щербеты</a></li>
+                    		<li><a href="#">Фруктовый лёд</a></li>
+                    		<li><a href="#">Мелорин</a></li>
+                		</ul>
+                	</div>
 				</li>
 				<li><a href="delvery.html" title="Информация о доставке и оплате">Доставка и оплата</a></li>
-				<li><a href="abotu.html" title="Информация о компании">О компании</a></li>
+				<li><a href="about.html" title="Информация о компании">О компании</a></li>
 			</ul>
-			<ul class="user-navigation">
+			<ul class="user-navigation interactive">
 				<li>
 					<a href="search.html" title="Поиск по сайту">Поиск</a>
-					<section class="modal modal-search">
+					<section class="modal modal-search sub-menu">
 						<h2 class="visually-hidden">Поиск по сайту</h2>
 						<form action="https://yandex.ru/search/" method="get" class="form-search">
 							<input type="text" name="text" placeholder="Что ищем?" required="required">
@@ -37,7 +42,7 @@
 				</li>
 				<li>
 					<a href="login.html" title="Вход в личный кабинет">Вход</a>
-					<section class="modal modal-login">
+					<section class="modal modal-login sub-menu">
 						<h2 class="visually-hidden">Вход в личный кабинет</h2>
 						<form action="https://echo.htmlacademy.ru/" method="get" class="form-login">
 							<p>
@@ -60,7 +65,7 @@
 				</li>
 				<li>
 					<a href="basket.html" class="active" title="Корзина покупок">2 товара</a>
-					<div class="basket-list">
+					<div class="basket-list sub-menu">
 						<div class="basket-position">
 							<span>Пломбир с апельсиновым джемом</span>
 							<span>1,5 кг x 200 руб.</span>
@@ -83,11 +88,11 @@
 		</div>
 	</header>
 	<main class="container">
-		<ul class="breadcrumbs">
-			<li><a href="index.html" title="Главная страница">Главная</a></li>
-			<li><a href="#" title="Каталог мороженого">Каталог</a></li>
-			<li class="active">Сливочное</li>
-		</ul>
+		<div class="breadcrumbs">
+			<a href="index.html" title="Главная страница">Главная</a>
+			<a href="#" title="Каталог мороженого">Каталог</a>
+			<span class="current-page">Сливочное</span>
+		</div>
 		<h1>Сливочное мороженое</h1>
 		<section class="filters">
 			<h2 class="visually-hidden">Интерфейс для выбора вида мороженого</h2>
@@ -165,134 +170,134 @@
 			<h2 class="visually-hidden">Список сливочного мороженого</h2>
 			<ul class="catalog-list">
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
 					<p><img src="img/cream-1.png" alt="Мороженое Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">310</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочно-кофейное с кусочками шоколада</a></h3>
 					<p><img src="img/cream-2.png" alt="Мороженое Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочно-кофейное с кусочками шоколада</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">380</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
 					<p><img src="img/cream-3.png" alt="Мороженое Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">355</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>						
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное крем-брюле с карамельной подливкой</a></h3>
 					<p><img src="img/cream-4.png" alt="Мороженое Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное крем-брюле с карамельной подливкой</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">415</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>						
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с брусничным джемом</a></h3>
 					<p><img src="img/cream-5.png" alt="Мороженое Сливочное с брусничным джемом" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с брусничным джемом</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">325</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>						
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочно-черничное с цельными ягодами черники</a></h3>
 					<p><img src="img/cream-6.png" alt="Мороженое Сливочно-черничное с цельными ягодами черники" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочно-черничное с цельными ягодами черники</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">410</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>						
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочно-лимонное с карамельной присыпкой</a></h3>
 					<p><img src="img/cream-7.png" alt="Мороженое Сливочно-лимонное с карамельной присыпкой" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочно-лимонное с карамельной присыпкой</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">375</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с шоколадной стружкой</a></h3>
 					<p><img src="img/cream-8.png" alt="Мороженое Сливочное с шоколадной стружкой" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с шоколадной стружкой</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">320</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочно-ванильное с кусочками шоколада</a></h3>
 					<p><img src="img/cream-9.png" alt="Мороженое Сливочно-ванильное с кусочками шоколада" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочно-ванильное с кусочками шоколада</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">440</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с ментоловым сиропом</a></h3>
 					<p><img src="img/cream-10.png" alt="Мороженое Сливочное с ментоловым сиропом" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с ментоловым сиропом</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">435</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с кусочками черного шоколада</a></h3>
 					<p><img src="img/cream-11.png" alt="Мороженое Сливочное с кусочками черного шоколада" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с кусочками черного шоколада</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">355</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>						
 					</div>
 				</li>
 				<li>
-					<h3><a href="catalog-item.html" title="Мороженое">Сливочное с мятным сиропом</a></h3>
 					<p><img src="img/cream-12.png" alt="Мороженое Сливочное с мятным сиропом" width="267" height="267"></p>
-					<a href="#" class="invisibel-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
+					<a href="catalog-item.html" class="description" title="Мороженое">Сливочное с мятным сиропом</a>
+					<a href="#" class="invisible-link" title="Просмотр выбранной позиции">Быстрый просмотр</a>
 					<div class="price">
 						<span class="price-value">420</span>
-						<span class="currency">ք</span>
+						<span class="currency">рублей</span>
 						<span class="weight">кг</span>
 					</div>
 				</li>
 			</ul>
-			<ul class="pagination-list">
-				<li><a href="#" class="page prev disabled">Назад</a></li>
-				<li><a href="#" class="page current">1</a></li>
-				<li><a href="#" class="page">2</a></li>
-				<li><a href="#" class="page">3</a></li>
-				<li><a href="#" class="page">4</a></li>
-				<li><a href="#" class="page">5</a></li>
-				<li><a href="#" class="page next">Вперёд</a></li>
+			<ul class="paginator">
+				<a href="#" class="page prev disabled">Назад</a>
+				<a href="#" class="page current">1</a>
+				<a href="#" class="page">2</a>
+				<a href="#" class="page">3</a>
+				<a href="#" class="page">4</a>
+				<a href="#" class="page">5</a>
+				<a href="#" class="page next">Вперёд</a>
 			</ul>
 		</section>
 	</main>
