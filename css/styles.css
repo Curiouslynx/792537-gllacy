@@ -1,8 +1,8 @@
-html {
-	box-sizing: border-box;
-}
 *, *::before, *::after {
 	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
 }
 body {
 	margin: 0;
@@ -12,7 +12,7 @@ body {
 	line-height: 22px;
 	font-weight: 400;
 	color: #ffffff;
-	background-color: #94aa9d;
+	/*background-color: #94aa9d;*/
 }
 a {
 	text-decoration: none;
@@ -47,13 +47,29 @@ a:focus {
 .interactive>li:focus-within .sub-menu{
 	display:block;
 }
+
+.wrapper {max-width: 1200px; margin:0 auto; background-color: #859d8f;}
+
 .main-navigation {
+	display: flex;
+	
 	font-size: 16px;
 	line-height: 18px;
 }
+
+/* ОБВОДКА ВСЕХ FLEX-ЭЛЕМЕНТОВ внутри .main-navigation СЕРЫМ ПУНКТИРОМ: */ .main-navigation>* { outline:1px dashed silver; }
+
+.logo {
+	margin-left: 20px;
+}						
 .site-navigation,
 .user-navigation {
+	display: flex;
+	align-items: center;
 	list-style: none;
+}
+.user-navigation {
+	margin-left: auto;
 }
 .site-navigation a,
 .user-navigation a {
@@ -62,6 +78,7 @@ a:focus {
 .site-navigation a {
 	font-weight: 700;
 	border-bottom: 1px solid rgba(255,255,255,0.3);
+	margin-right: 40px;
 }
 .user-navigation a {
 	font-size: 14px;
@@ -76,10 +93,21 @@ a:focus {
 	color: #333333;
 	background-color: #f7f6f3;
 }
+.main-header {
+	position: relative;
+}
+.worktime-info {
+	position: absolute;
+	top: 75px;
+	right: 20px;
+	width: 170px;
+	text-align: right;
+}
 .worktime {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 16px;
+	margin: 6px 0;
 }
 .phone {
 	font-weight: 700;
